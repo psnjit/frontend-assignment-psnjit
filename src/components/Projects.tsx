@@ -94,8 +94,8 @@ const Projects = () => {
     <>
       {loading && <div className="loading">Loading</div>}
       {error && <div className="error">{error}</div>}
-
-      {!error && (
+      {!error && !data && <div className="no-items">No items to display</div>}
+      {!error && data && (
         <div className="table-container">
           <table>
             <thead>
