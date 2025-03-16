@@ -1,0 +1,116 @@
+.loading {
+  font-size: 20px;
+  font-weight: bold;
+  color: #3498db;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.error {
+  background-color: #ff4d4d; /* Bright red */
+  color: white;
+  padding: 12px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.error::before {
+  content: '⚠️';
+  font-size: 18px;
+}
+
+.table-container {
+  width: 100%;
+  overflow-x: auto;
+  padding: 20px;
+  background-color: #1e1e2f; /* Dark blue-gray background */
+  border-radius: 10px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #2b2b3a; /* Slightly lighter than container */
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+th,
+td {
+  padding: 12px 15px;
+  text-align: left;
+  color: white;
+}
+
+th {
+  background-color: #3e3e50; /* Header background */
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+tr:nth-child(even) {
+  background-color: #29293d; /* Alternating row color */
+}
+
+tr:hover {
+  background-color: #40405a; /* Highlight row on hover */
+}
+
+td {
+  border-bottom: 1px solid #444; /* Border between rows */
+}
+
+.button-container {
+  display: flex;
+  justify-content: center; /* Center the button */
+  align-items: center;
+  gap: 50px;
+  border-radius: 10px;
+  padding: 40px;
+}
+
+.button-container button {
+  background-color: #3498db; /* Vibrant blue */
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.button-container button:hover {
+  background-color: #2980b9; /* Darker blue on hover */
+  transform: scale(1.05); /* Slight scaling effect */
+}
+
+.button-container button:active {
+  background-color: #1f669b; /* Even darker when clicked */
+  transform: scale(0.98);
+}
+
+.button-container button:disabled {
+  background-color: #7a7a7a; /* Gray background */
+  color: #d3d3d3; /* Lighter text */
+  cursor: not-allowed;
+  transform: none; /* Remove hover effects */
+  opacity: 0.6;
+}
